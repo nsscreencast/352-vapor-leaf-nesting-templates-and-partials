@@ -1,0 +1,15 @@
+#set("title") { Hello Leaf Templates }
+
+#set("content") {
+  <h1>Hello from Leaf!</h1>
+
+  #if(user) {
+    <h2>You are logged in as #(user)</h2>
+
+    #embed("_categories")
+  } else {
+    <h2>You are not logged in</h2>
+  }
+}
+
+#embed("master")
